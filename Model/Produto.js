@@ -9,10 +9,7 @@ const ProdutoSchema = mongoose.Schema({
     region: [String],
     spawnTimes: [Date],
     image: String,
-    size: {
-        min: {type: mongoose.Types.Decimal128},
-        max: {type: mongoose.Types.Decimal128}
-    }
+    size: [{type: mongoose.Types.Decimal128}],
 })
 
 module.exports = mongoose.model('Produto', ProdutoSchema)

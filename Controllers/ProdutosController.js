@@ -23,7 +23,7 @@ module.exports = {
     },
     async index (request,  response){
         const produto = await Produto.find();
-        console.log('GET /produto Produto.index', request)
+        console.log('GET /produto Produto.index')
         return response.json(produto);
     },
     async update (req, response){
@@ -48,6 +48,9 @@ module.exports = {
         return response.json(req.body)
     },
     async destroy (request, response){
-
+        const params = request.query
+        await Produto.findByIdAndDelete(params._id)
+        console.log('DELETE /produto Produto.destroy')
+        return response.send('Destroy')
     }
 }

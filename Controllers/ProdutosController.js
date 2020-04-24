@@ -15,17 +15,25 @@ module.exports = {
             image,
             size
         })
-        console.log('POST /produto Produto.create', request)
+        console.log('POST /produto Produto.create', request.body)
         return response.json(produto)
     },
     async show (request, response){
-
+        Produto.findById(request.params._id)
+        .then(idFound => {
+            if(!idFound){ return response.res.status(404).end(); }
+            return response.status(200).json(idFound);
+        })
+        .catch(err => next(err)); 
+        console.log('GET /produto/:id Produto.show', request.params)
     },
+
     async index (request,  response){
         const produto = await Produto.find();
         console.log('GET /produto Produto.index')
         return response.json(produto);
     },
+
     async update (req, response){
         var _id = req.body._id
 
@@ -48,7 +56,7 @@ module.exports = {
         return response.json(req.body)
     },
     async destroy (request, response){
-        const params = request.query
+        const params = request.params
         await Produto.findByIdAndDelete(params._id)
         console.log('DELETE /produto Produto.destroy')
         return response.send('Destroy')

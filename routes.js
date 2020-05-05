@@ -7,6 +7,7 @@ const ProdutoController = require('./Controllers/ProdutosController')
  routes.post('/produto', ProdutoController.create);
  routes.put('/produto', ProdutoController.update);
  routes.get('/produto/:_id', ProdutoController.show);
+ routes.patch('/produto/update/:id', ProdutoController.updatePatch)
  routes.delete('/produto/:_id', ProdutoController.destroy);
 
 

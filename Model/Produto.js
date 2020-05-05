@@ -10,6 +10,7 @@ const ProdutoSchema = mongoose.Schema({
     spawnTimes: [Date],
     image: String,
     size: [{type: mongoose.Types.Decimal128}],
+    percentCatch: [{type: mongoose.Types.Decimal128}]
 })
 
 module.exports = mongoose.model('Produto', ProdutoSchema)

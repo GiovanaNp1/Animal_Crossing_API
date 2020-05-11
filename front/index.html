@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="produto-title">
+        <div class="header">
+            <h1>{{ header }}</h1>
+            <button class="btn btn-primary" v-if="state === 'default'" @click="changeState('edit')">Add Item</button>
+            <button class="btn btn-cancel" v-else @click="changeState('default')">Cancel</button>
+        </div>
+        <div v-if="state === 'edit'" class="add-item-form">
+            <input v-model="newItem" type="text" placeholder="Add an item" @keyup.enter="saveItem">
+            <!-- <p>{{ characterCount }}/200</p> -->
+            <button class="btn btn-primary" v-bind:disabled="newItem.length === 0" @click="saveItem">Save Item</button>
+        </div>
+        <!-- <a v-bind:href="newItem" target="_blank">Dynamic Link</a> -->
+        <ul>
+            <li v-for="item in reversedItems" :class="{strikeout : item.purchansed}" @click="togglePunchased(item)" >{{ item.label }}</li>
+        </ul>
+        <p v-if="items.length === 0">Nice Job!!</p>
+        <!-- <input type="text" v-model="header"> -->
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        new Vue({
+            el: '#produto-title',
+            data: {
+                state: 'default',
+                header: 'Vue is ready to party',
+                newItem: '',
+                items: [{
+                    label: '10 party hats',
+                    purchansed: false,
+                    highPriority: false,
+                },
+                {
+                    label: '20 cups',
+                    purchansed: true,
+                    highPriority: false,
+                },
+                {
+                    label: '2 board games',
+                    purchansed: false,
+                    highPriority: true,
+                }
+                ]
+            },
+            computed: {
+                // characterCount() {
+                //     return this.newItem.length;
+                // }
+                reversedItems(){
+                    return this.items.slice(0).reverse()
+                }
+            },
+            methods: {
+                saveItem: function () {
+                    this.items.push({
+                    label: this.newItem,
+                    purchansed: false,
+                },);
+                    this.newItem = ''
+                },
+                changeState: function (newState) {
+                    this.state = newState;
+
+                    this.newState = '';
+                },
+                togglePunchased: function (item) {
+                    item.purchansed = !item.purchansed
+                }
+            }
+        });
+    </script>
+</body>
+</html>

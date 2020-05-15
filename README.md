@@ -15,14 +15,14 @@
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
 > Funcionalidades Concluidas :
-> End points back-end de produto  heavy_check_mark:
-> Modelo de produto  heavy_check_mark:
-> Tela Principal heavy_check_mark:
+> End points back-end de produto  :heavy_check_mark:
+> Modelo de produto  :heavy_check_mark:
+> Tela Principal :heavy_check_mark:
 
 > Funcionalidades Em desenvolvimento :
-> Tela sobre warning:
-> End points de Villagers warning:
-> Modelo de Villagers warning:
+> Tela sobre :warning:
+> End points de Villagers :warning:
+> Modelo de Villagers :warning:
 
 ## Linguagens e libs utilizadas :books:
 
@@ -40,8 +40,6 @@
 Veja alguns problemas que surgiram no desenvolvimento deste projeto e como os resolvi em [issues](https://github.com/Diana-ops/treina-dev-turma-3/issues)
 
 ## Deploy da Aplicação: :mushroom::apple:
-
-/* Aqui estamos usando a tag Quotes do markdown*/
 
 <!-- > https://certificates-for-everyone-womakerscode.netlify.app/ -->
 

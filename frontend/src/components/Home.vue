@@ -23,14 +23,11 @@
                 </p>
             </b-row>
             <div class="labels">
-                <b-badge pill variant="primary">Primary</b-badge>
-                <b-badge pill variant="secondary">Secondary</b-badge>
-                <b-badge pill variant="success">Success</b-badge>
-                <b-badge pill variant="danger">Danger</b-badge>
-                <b-badge pill variant="warning">Warning</b-badge>
-                <b-badge pill variant="info">Info</b-badge>
-                <b-badge pill variant="light">Light</b-badge>
-                <b-badge pill variant="dark">Dark</b-badge>
+                <b-badge pill variant="danger">Amenities</b-badge>
+                <b-badge pill variant="warning">Cookie</b-badge>
+                <b-badge pill variant="info">Villager</b-badge>
+                <b-badge pill class="pink" variant="light">Snacks</b-badge>
+                <b-badge pill class="purple" variant="dark">Product</b-badge>
             </div>
             <div class="pesquisa text-left">
                 <label for="basic-ur">Your vanity URL</label>
@@ -122,7 +119,7 @@ a {
   height: 4.375rem;
 }
 .principal{
-    background-image: url("https://attackofthefanboy.com/wp-content/uploads/2020/03/Animal-Crossing-New-Horizons-When-does-Night-Start.jpg");
+    background-image: url("https://images4.alphacoders.com/936/thumb-1920-936849.jpg");
     color: aliceblue;
     height:16.25rem;
     justify-content: center;
@@ -164,5 +161,11 @@ pre{
 footer{
     padding: 1.25rem;
     background-color: darksalmon;
+}
+.pink{
+    background-color: #ff7ebb;
+}
+.purple{
+    background-color: #6f42c1;
 }
 </style>

@@ -37,7 +37,7 @@
 
 ### Resolvendo problemas
 
-Veja alguns problemas que surgiram no desenvolvimento deste projeto e como os resolvi em [issues](https://github.com/Diana-ops/treina-dev-turma-3/issues)
+Veja alguns problemas que surgiram no desenvolvimento deste projeto e como os resolvi em [issues](https://github.com/GiovanaNp1/Animal_Crossing_API/issues)
 
 ## Deploy da Aplicação: :mushroom::apple:
 

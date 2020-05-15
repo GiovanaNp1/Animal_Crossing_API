@@ -13,7 +13,7 @@
 - [ ] Furniture
 - [ ] Memories
 
-## O que a plataforma é capaz de fazer :checkered_flag:
+## Planejamentos e entregas :checkered_flag:
 > Funcionalidades Concluidas :
 > End points back-end de produto  :heavy_check_mark:
 > Modelo de produto  :heavy_check_mark:

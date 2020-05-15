@@ -1,0 +1,10 @@
+---
+applications:
+- name: animalcrossing
+  memory: 128M
+  routes: 
+    - route: https://animal-crossigng-pocket-api.mybluemix.net/
+  buildpacks:
+    - sdk-for-nodejs
+  command: node server.js
+  timeout: 600

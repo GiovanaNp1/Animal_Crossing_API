@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 
 const app = express();
+const port = (process.env.PORT || 3333);
 
-mongoose.connect('mongodb+srv://GiovanaN:gio19gio@cluster0-elgva.mongodb.net/animal_crossing_pc?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Visitante:Visitante123@cluster0-elgva.mongodb.net/animal_crossing_pc?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology:  true
 });
@@ -12,6 +13,6 @@ mongoose.connect('mongodb+srv://GiovanaN:gio19gio@cluster0-elgva.mongodb.net/ani
 app.use(express.json());
 app.use(routes)
 
-app.listen(3333)
+app.listen(port, () => console.log(`Listening on port ${port}`));
   
   

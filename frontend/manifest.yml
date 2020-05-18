@@ -1,0 +1,10 @@
+---
+applications:
+- name: animal-crossign-pocket-api
+  memory: 256M
+  routes: 
+    - route: https://animal-crossign-pocket-api.us-south.cf.appdomain.cloud/
+  buildpacks:
+    - sdk-for-nodejs
+  command: node index.js
+  timeout: 600

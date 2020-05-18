@@ -6,5 +6,5 @@ applications:
     - route: https://animal-crossign-pocket-api.us-south.cf.appdomain.cloud/
   buildpacks:
     - sdk-for-nodejs
-  command: node server.js
+  command: node index.js
   timeout: 600

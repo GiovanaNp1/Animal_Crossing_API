@@ -30,14 +30,14 @@
                 <b-badge pill class="purple" variant="dark">Product</b-badge>
             </div>
             <div class="pesquisa text-left">
-                <label for="basic-ur">Your vanity URL</label>
+                <label for="basic-url">Your vanity URL</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon3">https://example.com/produto/</span>
                     </div>
                     <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                        <button class="btn btn-outline-secondary"  @click="updateTodo()" type="button" id="button-addon2">Button</button>
                     </div>
                 </div>
             </div>
@@ -84,11 +84,38 @@
 </template>
 
 <script>
+// import { APIService }  from '';
+// const API_URL = 'http://localhost:8080';
+
+// const apiService = new APIService();
+
 export default {
-  name: 'Home',
-  props: {
-    msg: String
-  }
+
+    name: 'Home',
+    props: {
+        msg: String
+    // }, components: {
+    //     },
+
+    //     data() {
+
+    //     return {
+
+    //     todos: [],
+    //     numberOfProducts:0
+    //     };
+
+    //     },
+    //     methods: {
+    //         getIndexProdutos(){
+    //         apiService.getProdutos().then((data) => {
+
+    //         this.todos = data.data;
+    //         this.numberOfProducts = data.count;
+
+    //         });
+    //         },
+        }
 }
 </script>
 

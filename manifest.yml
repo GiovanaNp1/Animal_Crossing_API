@@ -1,6 +1,6 @@
----
-applications:
+  applications:
 - name: animal-crossign-pocket-api
+  random-route: true
   memory: 256M
   routes: 
     - route: https://animal-crossign-pocket-api.us-south.cf.appdomain.cloud/

@@ -1,7 +1,10 @@
 applications:
  - name: animal-crossign-pocket-api
      path: ./dist
-     buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+      routes: 
+    - route: https://animal-crossign-pocket-api.us-south.cf.appdomain.cloud/
+    buildpacks:
+    - sdk-for-nodejs
      random-route: true
      memory: 256M
      env:

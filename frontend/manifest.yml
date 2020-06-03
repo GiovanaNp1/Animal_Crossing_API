@@ -1,6 +1,6 @@
 applications:
  - name: animal-crossign-pocket-api
-     path: ./dist
+     path: /dist
     buildpacks:
     - https://github.com/GiovanaNp1/Animal_Crossing_API
      random-route: true

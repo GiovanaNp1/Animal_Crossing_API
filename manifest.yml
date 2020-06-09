@@ -1,6 +1,6 @@
 applications:
- - name: animal-crossign-pocket-api-OLD-1591664069
-     path: ./dist
+ - name: animal-crossign-pocket-api
+     path: frontend/dist
      buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
      random-route: true
      memory: 256M

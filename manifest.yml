@@ -1,8 +1,11 @@
 applications:
- - name: animal-crossign-pocket-api
-     path: frontend/dist
-     buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-     random-route: true
-     memory: 256M
-     env:
-     FORCE_HTTPS: true
+    - name: animal-crossing-pocket-api
+      path: ./
+      command: node index.js
+      instances: 1
+      routes:
+        - route: animal-crossing-pocket-api.mybluemix.net
+      random-route: true
+      memory: 64M
+      env:
+        LOCATION: 'IBM Cloud'
